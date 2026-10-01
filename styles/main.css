@@ -1,0 +1,569 @@
+
+/* =========================================
+   GENERAL STYLES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    background-color: #003b2f;
+    color: white;
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d9b44a;
+}
+
+
+/* =========================================
+   HOMEPAGE HERO
+   ========================================= */
+
+.hero {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0, 45, 35, 0.75),
+            rgba(0, 45, 35, 0.75)
+        ),
+        url("../images/building.avif");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ACADEMICS PAGE HERO
+   ========================================= */
+
+.hero + .intro {
+    /* Keeps the academics page visually consistent */
+}
+
+body:has(.intro) .hero {
+    min-height: auto;
+
+    background:
+        linear-gradient(
+            rgba(2, 2, 84, 0.88),
+            rgba(2, 2, 84, 0.88)
+        );
+
+    padding: 90px 20px;
+}
+
+body:has(.intro) .hero h1 {
+    font-size: 3.5rem;
+}
+
+body:has(.intro) .hero p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #d9b44a;
+    color: #171725;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #f0cf69;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 2.3rem;
+
+    margin-bottom: 40px;
+
+    color: darkblue;
+}
+
+
+/* =========================================
+   HOMEPAGE — ABOUT
+   ========================================= */
+
+.about {
+    background-color: white;
+}
+
+.about-content {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   HOMEPAGE — CARDS
+   ========================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #003b2f;
+
+    margin-bottom: 15px;
+
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #555;
+}
+
+
+/* =========================================
+   HOMEPAGE — CAMPUS LIFE
+   ========================================= */
+
+.campus-life {
+    background-color: #e9eee9;
+}
+
+.campus-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.campus-text {
+    flex: 1;
+}
+
+.campus-text h3 {
+    color: #003b2f;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 15px;
+}
+
+.campus-text p {
+    margin-bottom: 15px;
+}
+
+.campus-image {
+    flex: 1;
+}
+
+.campus-image img {
+    width: 100%;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* =========================================
+   HOMEPAGE — LOCATION
+   ========================================= */
+
+.location {
+    background-color: white;
+
+    text-align: center;
+}
+
+.location p {
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   ACADEMICS — INTRO
+   ========================================= */
+
+.intro {
+    background-color: white;
+
+    padding: 60px 8%;
+
+    text-align: center;
+}
+
+.intro h2 {
+    color: darkblue;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   ACADEMICS — PROGRAMS
+   ========================================= */
+
+.programs {
+    padding: 70px 8%;
+}
+
+.program-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.program-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card h3 {
+    color: darkblue;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 12px;
+}
+
+.program-card p {
+    color: #555;
+}
+
+.program-card a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: darkblue;
+
+    font-weight: bold;
+}
+
+.program-card a:hover {
+    color: #b28b00;
+}
+
+
+/* =========================================
+   ACADEMICS — EXPERIENCE
+   ========================================= */
+
+.experience {
+    background-color: #e9eee9;
+
+    padding: 70px 8%;
+}
+
+.experience-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+.experience-box {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+}
+
+.experience-box h3 {
+    color: darkblue;
+
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   ACADEMICS — STATISTICS
+   ========================================= */
+
+.stats {
+    background-color: #00093b;
+
+    color: white;
+
+    padding: 60px 8%;
+}
+
+.stats-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+
+    color: #d9b44a;
+}
+
+.stat p {
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   ACADEMICS — CALL TO ACTION
+   ========================================= */
+
+.cta {
+    background-color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.cta h2 {
+    color: darkblue;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: darkblue;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-content {
+        flex-direction: column;
+    }
+
+    .experience-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
