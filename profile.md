@@ -55,6 +55,6 @@ I gained some rudimentary knowledge of Python from a course I took in 10th grade
 ## My Info
 
 - [My GitHub profile](https://github.com/samuelaibel)
-- [A site I visit a lot](https://www.khanacademy.org/)
+- [A site I visit a lot](https://www.espn.com/)
 
 ![My Github Profile Picture](https://avatars.githubusercontent.com/u/327211599?s=100&v=4)
