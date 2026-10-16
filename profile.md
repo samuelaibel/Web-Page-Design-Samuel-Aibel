@@ -1,6 +1,6 @@
 # Samuel Aibel: Web Designer Profile
 
-![Profile Photo](images/profile.jpg)
+![Profile Photo](profile.jpg)
 
 ## About Me
 
@@ -41,7 +41,7 @@ I gained some rudimentary knowledge of Python from a course I took in 10th grade
 </head>
 <body>
   <h1>Hello, I'm Samuel Aibel!</h1>
-  <p>Future web designer.</p>
+  <p>Future web designer</p>
 </body>
 </html>
 ```
