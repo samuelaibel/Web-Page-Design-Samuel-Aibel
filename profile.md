@@ -1,6 +1,6 @@
 # Samuel Aibel: Web Designer Profile
 
-![Profile Photo](profile.jpg)
+![Profile Photo](profile.jpeg)
 
 ## About Me
 
