@@ -1,4 +1,4 @@
-#Reflection
+# Reflection
 
 1. After moving files, the links to other HTML pages and the CSS stopped working because the paths pointed at the old locations. I used relative paths and root relative paths to direct to the correct subfolders.
 
