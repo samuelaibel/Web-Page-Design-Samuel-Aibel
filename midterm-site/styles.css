@@ -1,0 +1,360 @@
+/* ============================================
+   NY Giants: Last 5 Games
+   Shared stylesheet for every page
+   ============================================ */
+
+/* ---------- Color variables ---------- */
+:root {
+  --giants-blue: #0b2265;
+  --giants-red: #a71930;
+  --light-gray: #f2f4f8;
+  --mid-gray: #a5acaf;
+  --dark-text: #1c1c1c;
+  --white: #ffffff;
+  --win: #1e7d32;
+  --loss: #a71930;
+  --tie: #8a6d00;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Arial Black", "Segoe UI", Arial, sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--giants-blue);
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--giants-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 16px 20px;
+  border-bottom: 6px solid var(--giants-red);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: var(--mid-gray);
+}
+
+/* ---------- Navigation bar ---------- */
+nav {
+  background-color: var(--dark-text);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  background-color: var(--giants-red);
+}
+
+/* The current page gets this class so it stays highlighted */
+nav a.active {
+  background-color: var(--giants-blue);
+  border-bottom: 3px solid var(--giants-red);
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  color: var(--giants-blue);
+  border-bottom: 3px solid var(--giants-red);
+  padding-bottom: 6px;
+}
+
+/* ---------- Scoreboard ---------- */
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--giants-blue);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.team-score {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.versus {
+  font-size: 1.2rem;
+  color: var(--mid-gray);
+}
+
+.game-info {
+  text-align: center;
+  color: #555;
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+
+/* ---------- Result badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.badge.win  { background-color: var(--win); }
+.badge.loss { background-color: var(--loss); }
+.badge.tie  { background-color: var(--tie); }
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--giants-blue);
+  color: var(--white);
+}
+
+td:first-child, th:first-child {
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+tbody tr:hover {
+  background-color: #dde3f0;
+}
+
+/* Lets wide tables scroll on phones instead of breaking the page */
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* ---------- Game cards (home page) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background-color: var(--white);
+  border-top: 6px solid var(--giants-blue);
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+}
+
+.game-card h3 {
+  margin: 0 0 6px;
+  color: var(--giants-blue);
+}
+
+.game-card .final {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.game-card.preview-card {
+  border-top-color: var(--giants-red);
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-block;
+  background-color: var(--giants-red);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.button:hover {
+  background-color: var(--giants-blue);
+}
+
+/* ---------- Leader boxes ---------- */
+.leaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.leader {
+  background-color: var(--light-gray);
+  border-left: 5px solid var(--giants-red);
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.leader .category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.leader .player {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--giants-blue);
+}
+
+/* ---------- Scoring summary list ---------- */
+.scoring-list {
+  padding-left: 20px;
+}
+
+.scoring-list li {
+  margin-bottom: 6px;
+}
+
+/* ---------- Page-to-page navigation ---------- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ---------- Photos ---------- */
+.photo {
+  margin: 0 0 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.photo figcaption {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--giants-blue);
+  color: var(--mid-gray);
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .scoreboard {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .team-score {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}
