@@ -25,7 +25,7 @@ div.flex-container > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 450px;
+  flex-basis: 550px;
   }
 
   footer {
