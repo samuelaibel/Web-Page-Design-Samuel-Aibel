@@ -13,10 +13,22 @@ ul.topnav {
 }
 div.flex-container {
   display: flex;
-  height: 250px;
+  height: 600px;
+  
 }
 div.flex-container > div {
     margin: 10px;
     background-color: #f1f1f1;
     text-align: center;
+    font-family: Arial;
+    font-size: 15px;
   }
+
+  footer {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-family: Arial;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
