@@ -3,4 +3,20 @@ header {
   text-align: center;
   padding: 10px;
 }
-
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  justify-content: center;
+}
+div.flex-container {
+  display: flex;
+  height: 250px;
+}
+div.flex-container > div {
+    margin: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+  }

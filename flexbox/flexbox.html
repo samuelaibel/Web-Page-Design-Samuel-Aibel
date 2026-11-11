@@ -11,17 +11,54 @@ body {
 
 header {
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
   font-family: Arial;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
+
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  justify-content: center;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+div.flex-container {
+  display: flex;
+  height: 250px;
+}
+div.flex-container > div {
+    margin: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+  font-family: Arial;
+  font-size: 15px;
+  }
+
+
+
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Header</h1>
+  <a>Header</a>
 </header>
+
+<ul class="topnav">
+  <a>Navigation Menu</a>
+</ul>
+
+<div class="flex-container">
+  <div>Main Content</div>
+</div>
+
 
 </body>
 </html>
